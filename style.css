@@ -1,0 +1,495 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#ff4b91,#8a2be2);
+
+    overflow-x:hidden;
+
+    color:white;
+
+}
+
+/* ==========================
+HEART BACKGROUND
+========================== */
+
+.hearts{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:-1;
+
+}
+
+.hearts::before{
+
+content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+
+position:absolute;
+
+font-size:22px;
+
+width:100%;
+
+height:100%;
+
+animation:floatHearts 18s linear infinite;
+
+opacity:.15;
+
+}
+
+@keyframes floatHearts{
+
+0%{
+
+transform:translateY(100vh);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
+
+/* ==========================
+HERO
+========================== */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+.glass{
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+padding:50px;
+
+border-radius:25px;
+
+width:90%;
+
+max-width:700px;
+
+box-shadow:0 0 30px rgba(255,255,255,.2);
+
+animation:fadeUp 1.2s;
+
+}
+
+.glass h2{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+font-weight:400;
+
+}
+
+.glass h1{
+
+font-size:60px;
+
+font-family:'Great Vibes',cursive;
+
+margin-bottom:20px;
+
+}
+
+.glass span{
+
+color:#ffea00;
+
+}
+
+.quote{
+
+font-size:20px;
+
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+button{
+
+padding:16px 34px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+font-size:18px;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+#startBtn{
+
+background:white;
+
+color:#ff4b91;
+
+}
+
+#startBtn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 25px white;
+
+}
+
+/* ==========================
+COMMON SECTION
+========================== */
+
+section{
+
+padding:90px 20px;
+
+text-align:center;
+
+}
+
+section h2{
+
+font-size:40px;
+
+margin-bottom:45px;
+
+font-family:'Great Vibes',cursive;
+
+}
+
+.card{
+
+max-width:900px;
+
+margin:auto;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
+
+padding:40px;
+
+border-radius:25px;
+
+line-height:2;
+
+font-size:20px;
+
+box-shadow:0 0 25px rgba(255,255,255,.18);
+
+}
+
+/* ==========================
+TIMER
+========================== */
+
+#loveTimer{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+#loveTimer div{
+
+background:rgba(255,255,255,.15);
+
+padding:25px;
+
+border-radius:20px;
+
+width:160px;
+
+backdrop-filter:blur(15px);
+
+}
+
+#loveTimer h1{
+
+font-size:55px;
+
+}
+
+#loveTimer p{
+
+font-size:18px;
+
+margin-top:10px;
+
+}
+
+/* ==========================
+LETTER
+========================== */
+
+.letter p{
+
+white-space:pre-line;
+
+font-size:20px;
+
+}
+
+/* ==========================
+PROPOSAL
+========================== */
+
+.proposal h1{
+
+font-size:48px;
+
+line-height:1.5;
+
+margin-bottom:40px;
+
+font-family:'Great Vibes',cursive;
+
+}
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+position:relative;
+
+}
+
+#yesBtn{
+
+background:#00d26a;
+
+color:white;
+
+padding:18px 50px;
+
+font-size:22px;
+
+}
+
+#yesBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+#noBtn{
+
+background:#ff3d3d;
+
+color:white;
+
+padding:18px 50px;
+
+font-size:22px;
+
+position:relative;
+
+transition:.25s;
+
+}
+
+/* ==========================
+POPUP
+========================== */
+
+#popup{
+
+position:fixed;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%) scale(0);
+
+background:white;
+
+color:#ff4b91;
+
+padding:50px;
+
+border-radius:25px;
+
+text-align:center;
+
+width:90%;
+
+max-width:650px;
+
+transition:.5s;
+
+box-shadow:0 0 60px rgba(255,255,255,.5);
+
+z-index:100;
+
+}
+
+#popup.active{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+#popup h1{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+font-family:'Great Vibes',cursive;
+
+}
+
+#popup p{
+
+font-size:22px;
+
+line-height:1.8;
+
+}
+
+/* ==========================
+ANIMATION
+========================== */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(70px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.glass h1{
+
+font-size:42px;
+
+}
+
+.glass{
+
+padding:30px;
+
+}
+
+section h2{
+
+font-size:34px;
+
+}
+
+.proposal h1{
+
+font-size:34px;
+
+}
+
+.card{
+
+font-size:18px;
+
+padding:28px;
+
+}
+
+#loveTimer div{
+
+width:130px;
+
+}
+
+#loveTimer h1{
+
+font-size:42px;
+
+}
+
+button{
+
+font-size:16px;
+
+padding:14px 28px;
+
+}
+
+}
