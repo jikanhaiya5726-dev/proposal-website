@@ -9,7 +9,14 @@ startBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
-
+const texts = [
+  "Nahi Nahi 😄",
+  "Nakchari 😝",
+  "Think Again ❤️",
+  "Are You Sure? 🥺",
+  "Please? 🌹",
+  "Ek Baar Aur Socho 💕"
+];
 // ===============================
 // Love Timer
 // Meeting Date: 05 June 2026
@@ -97,7 +104,10 @@ yesBtn.addEventListener("click", () => {
     startHeartRain();
 
 });
-
+yesBtn.onclick = () => {
+    noBtn.style.display = "none";
+    popup.classList.add("active");
+};
 // ===============================
 // Heart Rain
 // ===============================
@@ -196,3 +206,20 @@ Forever Begins Here ❤️
 
 ===========================================
 `);
+// ==========================
+// Ring Opens
+// ==========================
+
+const openRing = document.getElementById("openRing");
+
+openRing.addEventListener("click", () => {
+
+    document.querySelector(".ring-section").style.display = "none";
+
+    document.querySelector(".proposal").style.display = "block";
+
+    document.querySelector(".proposal").scrollIntoView({
+        behavior: "smooth"
+    });
+
+});

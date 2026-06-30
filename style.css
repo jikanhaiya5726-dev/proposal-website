@@ -493,3 +493,150 @@ padding:14px 28px;
 }
 
 }
+/*==========================
+RING SECTION
+==========================*/
+
+.ring-section{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.ring-box{
+
+text-align:center;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(15px);
+
+padding:50px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+max-width:700px;
+
+width:90%;
+
+}
+
+.ring{
+
+font-size:120px;
+
+animation:ringPulse 2s infinite;
+
+cursor:pointer;
+
+}
+
+@keyframes ringPulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.15) rotate(10deg);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.ring-text{
+
+margin:30px 0;
+
+font-family:'Great Vibes',cursive;
+
+font-size:45px;
+
+font-weight:normal;
+
+}
+
+#openRing{
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ffffff;
+
+color:#ff3c87;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#openRing:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 20px white;
+
+}
+
+.proposal{
+
+display:none;
+
+animation:fadeUp 1s;
+
+}
+.final{
+    font-size:35px;
+    color:#ff4081;
+    font-family:'Great Vibes',cursive;
+}
+.overlay{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(6px);
+}
+@keyframes pop{
+
+0%{
+transform:translate(-50%,-50%) scale(.4);
+opacity:0;
+}
+
+100%{
+transform:translate(-50%,-50%) scale(1);
+opacity:1;
+}
+
+}
+#popup.active{
+animation:pop .7s ease;
+}
